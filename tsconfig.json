@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "dist",
+    "target": "ES2017",
+    "module": "CommonJS",
+    "removeComments": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    // "types": [ "@webgpu/types" ],
+    "typeRoots": ["node_modules/@types", "node_modules/@webgpu/types"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules/*"]
+}

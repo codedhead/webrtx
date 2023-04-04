@@ -1,0 +1,22 @@
+//==== uncomment only for syntax validation
+// #version 450
+// #pragma shader_stage(compute)
+// #extension GL_GOOGLE_include_directive : require
+// #define _COMPILE_FOR_VALIDATION_ONLY
+//====
+
+// clang-format off
+#include "./prelude.glsl"
+//==== only for syntax validation
+#ifdef _COMPILE_FOR_VALIDATION_ONLY
+#include "./dummy.app.prelude.glsl"
+#endif
+//====
+// include the implementation
+#include "./trace.glsl"
+// clang-format on
+
+//! looks like glslang force entry point to be 'main'
+void main() { invokeShaderIndirect_rayGen(rtUniformParams.sbtStartRayGen); }
+
+// user shader functions will go here
